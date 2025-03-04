@@ -1,6 +1,8 @@
 import data from "./assets/data.json";
 import "./App.css";
 import Header from "./components/Header";
+import Title from "./components/Title";
+import Gallery from "./components/Gallery";
 
 const App = () => {
   return (
@@ -16,7 +18,8 @@ const App = () => {
         {data.map((movieCategorie) => {
           return (
             <div>
-              <h2> {movieCategorie.category} </h2>
+              {/* <h2> {movieCategorie.category} </h2> */}
+              <Title text={movieCategorie.category} />
               {/* le but ici est de parcourir le tableau movieCategorie.images */}
               {/* et pour chaque élément de ce tableau je veux return <img/> */}
               {/* ici */}
@@ -25,6 +28,7 @@ const App = () => {
                   return <img src={images} alt={"img de netflix"} />;
                 })}
               </div>
+              <Gallery />
             </div>
           );
         })}

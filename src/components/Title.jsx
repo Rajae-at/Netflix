@@ -1,11 +1,7 @@
-import data from "./assets/data.json";
+const Title = (props) => {
+  console.log(props.text);
 
-const Title = () => {
-  return (
-    {data.map((movieCategorie) => {
-        return (
-          <div>
-            <h2> {movieCategorie.category} </h2>
-  )};
+  return <h2>{props.text}</h2>;
 };
+
 export default Title;
