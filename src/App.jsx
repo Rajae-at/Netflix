@@ -23,12 +23,12 @@ const App = () => {
               {/* le but ici est de parcourir le tableau movieCategorie.images */}
               {/* et pour chaque élément de ce tableau je veux return <img/> */}
               {/* ici */}
-              <div className="gallery">
+              {/* <div className="gallery">
                 {movieCategorie.images.map((images) => {
                   return <img src={images} alt={"img de netflix"} />;
                 })}
-              </div>
-              <Gallery />
+              </div> */}
+              <Gallery images={movieCategorie.images} />
             </div>
           );
         })}
